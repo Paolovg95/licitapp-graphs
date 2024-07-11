@@ -1,0 +1,93 @@
+[
+  {
+    "model": "licitaciones.categoria",
+    "pk": 1,
+    "fields": {
+      "nombre": "CATERING"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 2,
+    "fields": {
+      "nombre": "LIBRERIA"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 3,
+    "fields": {
+      "nombre": "PAPELERIA"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 4,
+    "fields": {
+      "nombre": "OFICINA"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 5,
+    "fields": {
+      "nombre": "VEHICULOS"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 6,
+    "fields": {
+      "nombre": "PISOS"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 7,
+    "fields": {
+      "nombre": "MUEBLES"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 8,
+    "fields": {
+      "nombre": "ELECTRODOMESTICOS"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 9,
+    "fields": {
+      "nombre": "SALUD"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 10,
+    "fields": {
+      "nombre": "HIGIENE"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 11,
+    "fields": {
+      "nombre": "TECNOLOGIA"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 12,
+    "fields": {
+      "nombre": "BEBIDAS"
+    }
+  },
+  {
+    "model": "licitaciones.categoria",
+    "pk": 13,
+    "fields": {
+      "nombre": "ALIMENTOS"
+    }
+  }
+]
