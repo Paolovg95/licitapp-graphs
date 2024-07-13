@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ categorias|json_script:"categorias-data" }}
+{{ gastos_per_categoria|json_script:"gastos-data" }}
+<div class="row">
+    <h1>Total de Licitaciones por Categoría</h1>
+    <div class="col-6">
+        <canvas id="doughnut-chart"></canvas>
+    </div>    
+    <h1>Total de Gastos por Categoría</h1>
+    <div class="col-6">
+        <canvas id="bar-chart"></canvas>
+    </div>
+</div>    
+<script>
+  const categorias = JSON.parse(document.getElementById('categorias-data').textContent);
+  const gastos_per_categoria = JSON.parse(document.getElementById('gastos-data').textContent);
+  let chart = new Chart(document.getElementById("doughnut-chart"), {
+    type: 'doughnut',
+    data: {
+      labels: Object.keys(categorias),
+      datasets: [
+        {
+          label: "Licitaciones",
+          data: Object.values(categorias)
+        }
+      ]
+    },
+      options: {
+      legend: { display: false }, 
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 1,
+      layout: {
+        padding: {
+          left: 25,
+          right: 25,
+          top: 25,
+          bottom: 25
+        }
+      }
+    },
+  });
+  let chart2 = new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: Object.keys(gastos_per_categoria),
+      datasets: [
+        {
+          label: "Total (Guaraníes)",
+          data: Object.values(gastos_per_categoria)
+        }
+      ]
+    },
+    options: {
+      legend: { display: false }, 
+      responsive: true,
+      maintainAspectRatio: false,
+      aspectRatio: 1,
+      layout: {
+        padding: {
+          left: 25,
+          right: 25,
+          top: 25,
+          bottom: 25
+        }
+      }
+    },
+  });
+</script>
+
+
+{% endblock %}
